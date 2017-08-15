@@ -1,12 +1,13 @@
-import React, {Component} from 'react'
-import {Table, Dimmer, Loader, Segment} from 'semantic-ui-react'
+import React, {Component} from 'react';
+import {Table} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
+import Loader from './Loader';
 import dataStore from '../dataStore';
 
 class BrowseCompetition extends Component {
   constructor(props) {
     super(props);
     this.state = {data: [], loading: true};
-    console.log(props)
   }
 
   componentDidMount() {
@@ -31,16 +32,6 @@ class BrowseCompetition extends Component {
 
   sortData(a, b) {
     return a.league < b.league ? -1 : 1;
-  }
-
-  loader() {
-    return (
-      <Segment style={{padding: '5em 0em'}}>
-        <Dimmer active inverted>
-          <Loader inverted>Fetching Data...</Loader>
-        </Dimmer>
-      </Segment>
-    )
   }
 
   tableData() {
@@ -75,7 +66,7 @@ class BrowseCompetition extends Component {
   render() {
     return (
       <div>
-        { this.state.loading ? this.loader() : this.tableData() }
+        { this.state.loading ? <Loader/> : this.tableData() }
       </div>
     )
   }

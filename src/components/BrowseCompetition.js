@@ -53,7 +53,9 @@ class BrowseCompetition extends Component {
               return (
                 <Table.Row key={row.id}>
                   <Table.Cell>{row.caption}</Table.Cell>
-                  <Table.Cell textAlign="center">{row.numberOfTeams}</Table.Cell>
+                  <Table.Cell textAlign="center">
+                    <Link to={`/teams/${row.id}`}>{row.numberOfTeams}</Link>
+                  </Table.Cell>
                   <Table.Cell textAlign="center">{row.numberOfGames}</Table.Cell>
                   <Table.Cell textAlign="center">{row.lastUpdated}</Table.Cell>
                 </Table.Row>

@@ -3,6 +3,7 @@ import {Container, Grid, Header} from 'semantic-ui-react'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import SeasonMenu from './components/SeasonMenu'
 import BrowseCompetition from './components/BrowseCompetition'
+import BrowseTeams from './components/BrowseTeams'
 
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
             <Grid columns={1} stackable>
               <Grid.Column>
                 <Route exact path="/competitions/:season" component={BrowseCompetition}/>
+                <Route exact path="/teams/:competition" component={BrowseTeams}/>
               </Grid.Column>
             </Grid>
           </Container>

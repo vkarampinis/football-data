@@ -22,7 +22,6 @@ class BrowseTeams extends Component {
     this.setState({loading: true});
     dataStore.teams(competition)
       .then(response => {
-        console.log(response);
         this.setState({
           data: response.data.teams,
           loading: false

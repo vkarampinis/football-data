@@ -5,6 +5,7 @@ import SeasonMenu from './components/SeasonMenu'
 import BrowseCompetition from './components/BrowseCompetition'
 import BrowseTeams from './components/BrowseTeams'
 import BrowseFixtures from './components/BrowseFixtures'
+import BrowsePlayers from './components/BrowsePlayers'
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
               <Grid.Column>
                 <Route exact path="/competitions/:id/fixtures" component={BrowseFixtures}/>
                 <Route exact path="/competitions/:season" component={BrowseCompetition}/>
+                <Route exact path="/teams/:team_id/players" component={BrowsePlayers}/>
                 <Route exact path="/teams/:competition" component={BrowseTeams}/>
               </Grid.Column>
             </Grid>

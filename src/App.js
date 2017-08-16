@@ -6,6 +6,7 @@ import BrowseCompetition from './components/BrowseCompetition'
 import BrowseTeams from './components/BrowseTeams'
 import BrowseFixtures from './components/BrowseFixtures'
 import BrowsePlayers from './components/BrowsePlayers'
+import Footer from './components/Footer'
 
 class App extends Component {
 
@@ -29,6 +30,7 @@ class App extends Component {
               </Grid.Column>
             </Grid>
           </Container>
+          <Footer />
         </div>
       </Router>
     );

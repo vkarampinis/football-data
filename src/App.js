@@ -15,7 +15,7 @@ class App extends Component {
       <Router>
         <div>
           <Container style={{padding: '5em 0em'}}>
-            <Header as='h2' dividing>Football Stats</Header>
+            <Header as='h2' dividing>Football Data</Header>
             <Grid columns={1} stackable>
               <Grid.Column>
                 <SeasonMenu/>

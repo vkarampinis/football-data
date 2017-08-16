@@ -1,8 +1,8 @@
 {
-  "name": "football-stats",
+  "name": "football-data",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vkarampinis.github.io/football-stats",
+  "homepage": "https://vkarampinis.github.io/football-data",
   "dependencies": {
     "axios": "^0.16.2",
     "react": "^15.6.1",

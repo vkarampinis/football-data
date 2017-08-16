@@ -40,8 +40,8 @@ class BrowseCompetition extends Component {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>League</Table.HeaderCell>
-            <Table.HeaderCell textAlign="center">Number of Teams</Table.HeaderCell>
-            <Table.HeaderCell textAlign="center">Number of Games</Table.HeaderCell>
+            <Table.HeaderCell textAlign="center">Teams</Table.HeaderCell>
+            <Table.HeaderCell textAlign="center">Games</Table.HeaderCell>
             <Table.HeaderCell textAlign="center">Last Updated</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
@@ -56,7 +56,9 @@ class BrowseCompetition extends Component {
                   <Table.Cell textAlign="center">
                     <Link to={`/teams/${row.id}`}>{row.numberOfTeams}</Link>
                   </Table.Cell>
-                  <Table.Cell textAlign="center">{row.numberOfGames}</Table.Cell>
+                  <Table.Cell textAlign="center">
+                    <Link to={`/competitions/${row.id}/fixtures`}>{row.numberOfGames}</Link>
+                  </Table.Cell>
                   <Table.Cell textAlign="center">{row.lastUpdated}</Table.Cell>
                 </Table.Row>
               )

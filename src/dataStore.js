@@ -16,6 +16,9 @@ const dataStore = {
   },
   teams: competition => {
     return axios.get(options.baseURL + 'competitions/' + competition + '/teams', options);
+  },
+  fixtures: id => {
+    return axios.get(options.baseURL + 'competitions/' + id + '/fixtures', options);
   }
 };
 
